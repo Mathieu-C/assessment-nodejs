@@ -1,2 +1,4 @@
-export { AttackService } from './attack.service';
-export { PlanetService } from './planet.service';
+import AttackService from './attack.service';
+import PlanetService from './planet.service';
+
+export { AttackService, PlanetService };

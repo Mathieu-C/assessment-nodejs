@@ -94,3 +94,4 @@ class PlanetService extends MoleculerService {
 }
 
 module.exports = PlanetService;
+export default PlanetService;

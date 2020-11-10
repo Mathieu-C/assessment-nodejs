@@ -99,3 +99,4 @@ class AttackService extends MoleculerService {
 }
 
 module.exports = AttackService;
+export default AttackService;
