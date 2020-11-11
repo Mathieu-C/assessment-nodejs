@@ -55,6 +55,9 @@
 			"@Entities": [
 				"src/Entities"
 			],
+			"@Config": [
+				"config"
+			],
 			"@Test/*": [
 				"test/*"
 			],
