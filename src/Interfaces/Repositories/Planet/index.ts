@@ -1,1 +1,0 @@
-export { DecreaseShieldOutDto } from './DecreaseShieldOutDto';
