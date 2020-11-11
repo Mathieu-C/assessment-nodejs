@@ -8,9 +8,9 @@
   "basePath": "/api",
   "swagger": "2.0",
   "paths": {
-    "/attack/Fire": {
+    "/user/login": {
       "post": {
-        "description": "Attacks to the planet with given weapon.",
+        "description": "Logs in the user.",
         "produces": [
           "application/json"
         ],
@@ -24,17 +24,17 @@
             "schema": {
               "type": "object",
               "required": [
-                "weaponName",
-                "planetName"
+                "name",
+                "password"
               ],
               "properties": {
-                "weaponName": {
+                "name": {
                   "type": "string",
-                  "example": "Death Star"
+                  "example": "Mark"
                 },
-                "planetName": {
+                "password": {
                   "type": "string",
-                  "example": "Alderaan"
+                  "example": "alligator15"
                 }
               }
             }
@@ -42,7 +42,10 @@
         ],
         "responses": {
           "200": {
-            "description": "Example attack result"
+            "description": "Login in successful"
+          },
+          "401": {
+            "description": "Unauthorized"
           },
           "422": {
             "description": "Missing parameters"
@@ -50,9 +53,9 @@
         }
       }
     },
-    "/planet/Defend": {
+    "/user/:id": {
       "post": {
-        "description": "Attacks to the planet with given weapon.",
+        "description": "Get a user by ID",
         "produces": [
           "application/json"
         ],
@@ -61,30 +64,23 @@
         ],
         "parameters": [
           {
-            "in": "body",
-            "name": "params",
+            "in": "path",
+            "name": "id",
             "schema": {
-              "type": "object",
-              "required": [
-                "weaponName",
-                "planetName"
-              ],
-              "properties": {
-                "weaponName": {
-                  "type": "string",
-                  "example": "Death Star"
-                },
-                "planetName": {
-                  "type": "string",
-                  "example": "Alderaan"
-                }
-              }
-            }
+              "type": "string"
+            },
+            "required": true
           }
         ],
         "responses": {
           "200": {
-            "description": "Example attack result"
+            "description": "User found"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "User not found"
           },
           "422": {
             "description": "Missing parameters"
