@@ -12,21 +12,40 @@ services:
     ports:
       - "3000:3000"
 
-  attack:
-    build: .
-    image: attack
-    env_file: docker-compose.env
-    environment:
-      SERVICES: attack
-
-  planet:
-    build: .
-    image: planet
-    env_file: docker-compose.env
-    environment:
-      SERVICES: planet
-
   nats-server:
     image: nats:latest
     ports:
       - "4222:4222"
+
+  user:
+    build:
+      context: .
+    image: axa-user
+    container_name: user
+    env_file: docker-compose.env
+    environment:
+      SERVICES: user
+    labels:
+      - "traefik.enable=false"
+    depends_on:
+        - nats-server
+    networks:
+      - internal
+
+  policy:
+    build:
+      context: .
+    image: axa-policy
+    container_name: policy
+    env_file: docker-compose.env
+    environment:
+      SERVICES: policy
+    labels:
+      - "traefik.enable=false"
+    depends_on:
+        - nats-server
+    networks:
+      - internal
+
+networks:
+  internal:
