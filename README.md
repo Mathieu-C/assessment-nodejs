@@ -48,7 +48,20 @@ Prefixed with `/api/`, requires a valid JWT (Bearer token) to be attached or wil
   - `users` can only access their own ressources (`users` routes only).
   - `admin` can access any ressource.
   - ACLs are in plain code, they could be stored in a dedicated database.
-- Licenses have been checked to allow commercial use of this API.
+- Better maintainability could be achieved through automated testing.
+- Licenses have been checked to allow commercial use of this API, here's a summary of the dependencies' licenses:
+  - MIT: 346
+  - ISC: 41
+  - Apache-2.0: 15
+  - BSD-3-Clause: 10
+  - BSD-2-Clause: 9
+  - MIT*: 2
+  - BSD: 1
+  - (MIT AND Apache-2.0): 1
+  - WTFPL: 1
+  - (WTFPL OR MIT): 1
+  - Apache License, Version 2.0: 1
+  - Unlicense: 1
 
 ## License
 
