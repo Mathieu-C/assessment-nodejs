@@ -10,7 +10,6 @@
 		"module": "commonjs",
 		"pretty": true,
 		"types": [
-			"jest",
 			"node"
 		],
 		"outDir": "dist",

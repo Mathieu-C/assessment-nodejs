@@ -20,7 +20,7 @@ const users = [
 	},
 ];
 
-const organizationName = 'pankod';
+const organizationName = 'axa';
 const projectName = 'moleculerjs-boilerplate';
 const packageName = 'moleculerjs-boilerplate';
 const url = [
@@ -31,11 +31,10 @@ const url = [
 ];
 
 const siteConfig = {
-	title: 'Pankod', // Title for your website.
+	title: 'Axa', // Title for your website.
 	headerTitle: 'moleculerjs-boilerplate',
-	tagline:
-		'Moleculer JS Microservice Boilerplate with Typescript, TypeORM, CLI, Service Helpers, Swagger, Jest, Docker, Eslint support and everything you will ever need to deploy rock solid projects.',
-	url: 'https://pankod.github.io', // Your website URL
+	tagline: 'Assessment',
+	url: '', // Your website URL
 	baseUrl: '/moleculerjs-boilerplate/', // Base URL for your project */
 	// For github.io type URLs, you would set the url and baseUrl like:
 	//   url: 'https://facebook.github.io',
@@ -106,7 +105,7 @@ const siteConfig = {
 
 	// Open Graph and Twitter card images.
 	// Google Analytics id
-	gaTrackingId: 'UA-143750629-1',
+	gaTrackingId: '',
 
 	// Facebook settings
 	facebookAppId: '',
