@@ -25,6 +25,7 @@ Prefixed with `/auth/`.
 | Endpoint | Method | Params | Description |
 | --- | --- | --- | --- | --- |
 | `/users/login`|`POST`|`name`, `password` | Authenticates the user, returns a JWT |
+
 For the sake of the assessment, the `password` is equals to the `name` of the account, here are 2 users you can use:
 - `Britney` (admin)
 - `Barnett` (user)
