@@ -4,11 +4,9 @@ This project is using the [Pankod MoleculerJS boilerplate](https://pankod.github
 ## Requirements
 - `npm`
 - `Node` =10.19.0
-- `Docker`
 
 ## Running the API
 - Install the dependencies `npm install`
-- Run the Docker containers `npm run dc:up`
 - Start the API `npm run dev`
 
 The API will then be accessible at [http://0.0.0.0:3000](http://0.0.0.0:3000)
