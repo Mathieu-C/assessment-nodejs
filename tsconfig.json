@@ -56,7 +56,10 @@
 				"src/Entities"
 			],
 			"@Config": [
-				"config"
+				"src/Config"
+			],
+			"@Config/*": [
+				"src/Config/*"
 			],
 			"@Test/*": [
 				"test/*"
@@ -72,6 +75,6 @@
 	"include": [
 		"./src/**/*.ts",
 		"./services/**/*.ts",
-		"./test/**/*.ts"
+		"./test/**/*.ts", "role-acl.d.ts"
 	]
 }
