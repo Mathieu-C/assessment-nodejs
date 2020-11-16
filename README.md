@@ -11,9 +11,6 @@ This project is using the [Pankod MoleculerJS boilerplate](https://pankod.github
 
 The API will then be accessible at [http://0.0.0.0:3000](http://0.0.0.0:3000)
 
-## Stopping the services
-- Stop the Docker containers `dc:down`
-
 ## Available endpoints
 The following endpoints are available as required by the assessment, a thorough documentation of these endpoints is available in the [Swagger documentation](http://0.0.0.0:3001).
 
