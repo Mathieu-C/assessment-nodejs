@@ -1,5 +1,6 @@
+import { User } from '@Entities';
 import jwt from 'jsonwebtoken';
-import { AuthConfig } from '../../config/auth-config';
+import { AuthConfig } from '@Config';
 
 export class AuthHelper {
 	static async checkPassword(password: string, hash: string): Promise<boolean> {
@@ -11,7 +12,7 @@ export class AuthHelper {
 		});
 	}
 
-	static generateToken(user: any) {
+	static generateToken(user: User) {
 		const data = user.name;
 
 		const accessToken = jwt.sign({ data }, AuthConfig.salt, { expiresIn: 60 * 60 });

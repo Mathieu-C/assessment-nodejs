@@ -23,15 +23,18 @@ export namespace IUser {
 		name: string;
 	}
 
-	export interface ReadInDto {
-		id?: string;
-		name?: string;
+	export interface GetInDto {
+		id: string;
 	}
 
-	export interface ReadOutDto {
+	export interface GetOutDto {
 		email: string;
 		id: string;
 		name: string;
 		role: role;
+	}
+
+	export interface GetByNameInDto {
+		name: string;
 	}
 }

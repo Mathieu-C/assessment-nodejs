@@ -1,6 +1,6 @@
 import { role } from '@Interfaces/Services/User/IUser';
 
-export default interface User {
+export interface User {
 	email: string;
 	id: string;
 	name: string;
