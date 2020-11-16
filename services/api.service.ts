@@ -35,10 +35,10 @@ const ApiService: ServiceSchema = {
 			},
 			{
 				aliases: {
-					'GET users/:id': 'users.Read',
-					'GET users/:name': 'users.Read',
-					'GET users/:name/policy': 'policies.Read',
-					'GET policies/:id/user': 'policies.Read',
+					'GET users/:id': 'users.Get',
+					'GET users/name/:name': 'users.GetByName',
+					'GET policies/user/:name': 'policies.GetByUser',
+					'GET policies/:id/user': 'policies.GetUser',
 				},
 				authorization: true,
 				bodyParser: {
@@ -52,19 +52,12 @@ const ApiService: ServiceSchema = {
 					origin: ['*'],
 				},
 				path: '/api',
-				whitelist: ['users.Read', 'policies.Read'],
-				// async onBeforeCall(ctx: Context, route: object, req: any) {
-				// 	return new Promise(resolve => {
-				// 		if (
-				// 			req.headers['authorization'] &&
-				// 			req.headers['authorization'].startsWith('Bearer')
-				// 		) {
-				// 			ctx.meta.authToken = req.headers.get('authorization')!.slice(7);
-				// 		}
-
-				// 		resolve();
-				// 	});
-				// },
+				whitelist: [
+					'users.Get',
+					'users.GetByName',
+					'policies.GetByUser',
+					'policies.GetUser',
+				],
 			},
 		],
 
@@ -90,7 +83,7 @@ const ApiService: ServiceSchema = {
 					return Promise.resolve(user);
 				});
 			} catch (err) {
-				console.log(err);
+				console.log('[Api Service]', err);
 				return Promise.reject(new E.UnAuthorizedError(E.ERR_INVALID_TOKEN, {}));
 			}
 		},
