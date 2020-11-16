@@ -23,7 +23,7 @@ The following endpoints are available as required by the assessment, a thorough 
 Prefixed with `/auth/`.
 
 | Endpoint | Method | Params | Description |
-| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- |
 | `/users/login`|`POST`|`name`, `password` | Authenticates the user, returns a JWT |
 
 For the sake of the assessment, the `password` is equals to the `name` of the account, here are 2 users you can use:
@@ -34,7 +34,7 @@ For the sake of the assessment, the `password` is equals to the `name` of the ac
 Prefixed with `/api/`, requires a valid JWT (Bearer token) to be attached or will return a `401: Unauthorized` error.
 
 | Endpoint | Method | Description |
-| --- | --- | --- | --- | --- |
+| --- | --- | --- |
 | `/users/{id}` | `GET` | Get user data by id |
 | `/users/name/{name}` | `GET` | Get user data by name |
 | `/policies/user/{name}` | `GET` | Get policies linked to a user name (admin only) |
